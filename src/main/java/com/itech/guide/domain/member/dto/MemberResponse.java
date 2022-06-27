@@ -5,6 +5,8 @@ import lombok.*;
 
 @Getter
 @Setter
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MemberResponse {
 
     private Long id;
@@ -12,10 +14,6 @@ public class MemberResponse {
     private int age;
 
     public static MemberResponse from (Member member) {
-        MemberResponse response = new MemberResponse();
-        response.id = member.getId();
-        response.name = member.getName();
-        response.age = member.getAge();
-        return response;
+       return new MemberResponse(member.getId(),member.getName(), member.getAge());
     }
 }

@@ -1,47 +1,65 @@
 package com.itech.guide.global.common.response;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
-import com.itech.guide.global.util.CustomLocalDateTimeSerializer;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.util.List;
+
 @Service
 public class ResponseService {
 
-    public ResponseEntity<ResponseDto> send(ResponseCode responseCode) {
-        return new ResponseEntity<>(setBasicResponse(responseCode), HttpStatus.OK);
+
+    //단일건 결과를 처리하는 메소드
+    public <T> SingleResult<T> getSingleResult(T data){
+        SingleResult<T> result = new SingleResult<>();
+        result.setDate(data);
+        setSuccessResult(result);
+        return result;
     }
 
-    public ResponseEntity<ResponseDto> sendData(ResponseCode responseCode, Object data) {
-        ResponseDto basicResponse = setBasicResponse(responseCode);
-        basicResponse.addData(data);
-        return new ResponseEntity<>(basicResponse, HttpStatus.OK);
+    //여러건 결과를 처리하는 메소드
+    public <T>ListResult<T> getListResult(List<T> list){
+        ListResult<T> result = new ListResult<>();
+        result.setList(list);
+        setSuccessResult(result);
+        return result;
     }
 
-    public String sendTextOfJson(ResponseCode status) throws JsonProcessingException {
-        ResponseDto resDto = ResponseDto
-                .builder()
-                .responseCode(status)
-                .build();
-
-        SimpleModule simpleModule = new SimpleModule();
-        simpleModule.addSerializer(LocalDateTime.class, new CustomLocalDateTimeSerializer());
-
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(simpleModule);
-
-        return objectMapper.writeValueAsString(resDto);
+    // 성공결과만 처리하는 메소드
+    public CommonResult getSuccessResult(){
+        CommonResult result = new CommonResult();
+        setSuccessResult(result);
+        return result;
     }
 
-    private ResponseDto setBasicResponse(ResponseCode responseCode) {
-        return ResponseDto
-                .builder()
-                .responseCode(responseCode)
-                .build();
+    private void setSuccessResult (CommonResult result) {
+        result.setSuccess(true);
+        result.setCode(CommonResponse.SUCCESS.getCode());
+        result.setMsg(CommonResponse.SUCCESS.getMsg());
+    }
+
+    //실패결과만 처리하는 메소드
+    public CommonResult getFailResult(ResponseCode errorResponse){
+        CommonResult result = new CommonResult();
+        result.setSuccess(false);
+        result.setCode(errorResponse.messageCode);
+        result.setMsg(errorResponse.message);
+        return result;
+    }
+    /**
+     * 코드와 Msg값을 가지는 열거형이다.
+     * */
+    @Getter
+    @RequiredArgsConstructor
+    @AllArgsConstructor
+    public enum CommonResponse{
+        SUCCESS(0,"성공하였습니다."),
+        FAIL(-1,"실패하였습니다.");
+
+        private int code;
+        private String msg;
     }
 
 }

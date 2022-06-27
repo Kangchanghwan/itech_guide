@@ -1,38 +1,34 @@
 package com.itech.guide.domain.member.service;
 
-import com.itech.guide.domain.member.entity.Member;
 import com.itech.guide.domain.member.dto.MemberResponse;
-import com.itech.guide.global.error.exception.BadRequestException;
-import com.itech.guide.domain.member.vo.SignUpRequest;
+import com.itech.guide.domain.member.entity.Member;
 import com.itech.guide.domain.member.repository.MemberRepository;
-import com.itech.guide.global.common.response.ResponseCode;
-import com.itech.guide.global.common.response.ResponseDto;
+import com.itech.guide.domain.member.vo.SignUpRequest;
 import com.itech.guide.global.common.response.ResponseService;
+import com.itech.guide.global.common.response.SingleResult;
+import com.itech.guide.global.error.exception.BadRequestException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional(readOnly = false)
+@Transactional
 @RequiredArgsConstructor
 public class MemberSignUpRestService {
 
-    private  final ResponseService responseService;
+    private final ResponseService responseService;
+
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public ResponseEntity<ResponseDto> join(SignUpRequest request) {
+    public SingleResult<MemberResponse> join(SignUpRequest request) {
         checkNameDuplicate(request.getName());
         checkPasswordConvention(request.getPassword());
         request.setPassword(passwordEncoder.encode(request.getPassword()));
         Member member = Member.from(request);
         member.addRole("ROLE_USER");
-        if(memberRepository.save(member) == null)
-            responseService.send(ResponseCode.F_SIGNUP);
-
-        return responseService.sendData(ResponseCode.S_OK,MemberResponse.from(member));
+        return responseService.getSingleResult(MemberResponse.from(member));
 
     }
 

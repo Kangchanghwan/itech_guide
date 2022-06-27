@@ -1,8 +1,8 @@
 package com.itech.guide.global.config.security;
 
-import com.itech.guide.global.error.exception.BadRequestException;
 import com.itech.guide.domain.member.service.CustomMemberDetailService;
 import com.itech.guide.global.common.redis.RedisService;
+import com.itech.guide.global.error.exception.BadRequestException;
 import io.jsonwebtoken.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,8 +22,6 @@ import java.util.Date;
 public class JwtProvider {
 
     private final RedisService redisService;
-
-
     private final CustomMemberDetailService customMemberDetailService;
     @Value("${spring.jwt.secret-key}")
     private  String SECRET_KEY;
@@ -91,13 +89,13 @@ public class JwtProvider {
 
     public String createAccessToken(String userId, String roles) {
 
-        Long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(accessTokenInvalidHour);
+        long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(accessTokenInvalidHour);
        // Long tokenInvalidTime = 1000L * 60 * 1; // 1m
         return this.createToken(userId, roles, tokenInvalidTime);
     }
 
     public String createRefreshToken(String userId, String roles) {
-        Long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(refreshTokenInvalidHour);
+        long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(refreshTokenInvalidHour);
         String refreshToken = this.createToken(userId, roles, tokenInvalidTime);
         redisService.setValues(userId, refreshToken, Duration.ofMillis(tokenInvalidTime));
         return refreshToken;

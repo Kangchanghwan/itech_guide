@@ -1,12 +1,14 @@
 package com.itech.guide.domain.member.entity;
 
 import com.itech.guide.domain.member.vo.SignUpRequest;
-import lombok.*;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Objects;
 
 /**
  * 1. 객체생성은 Builder 패턴과 static 생성자만 허용한다.
@@ -22,7 +24,6 @@ import java.util.Collection;
  * 11. 줄임말을 지양하고 정확한 이름을 사용한다.
  * */
 
-@EqualsAndHashCode(of = {"id"})
 @ToString(of = "name")
 @Entity
 @Getter
@@ -53,7 +54,6 @@ public class Member {
     private String name;
     @Column(name = "member_age",nullable = false)
     private int age;
-
     @Column(name = "member_role")
     private String role;
 
@@ -61,4 +61,16 @@ public class Member {
         this.role = roleName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Member member = (Member) o;
+        return id != null && Objects.equals(id, member.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

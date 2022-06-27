@@ -34,6 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatcher("/**").authorizeRequests() // 보호된 리소스 URI에 접근할 수 있는 권한 설정
 
                 .antMatchers("/").permitAll() // 전체 접근 허용
+                .antMatchers("/exception/**").permitAll()
 
                 .antMatchers("/api/**/re-issue").authenticated() // 인증된 사용자만 접근 허용
                 .antMatchers(GET,"/api/**/members","/api/**/members/**").authenticated()
@@ -58,7 +59,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
+    public void configure(WebSecurity web) {
         web.ignoring()
                 .antMatchers("/resources/**");
     }

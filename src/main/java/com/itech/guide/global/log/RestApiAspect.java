@@ -2,7 +2,6 @@ package com.itech.guide.global.log;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -14,11 +13,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +27,7 @@ public class RestApiAspect {
     @Autowired
     private  ObjectMapper mapper;
 
-    @Pointcut("within(com.itech.guide.domain.member.api..*)" + "&& @annotation(org.springframework.web.bind.annotation.PostMapping)")
+    @Pointcut("within(com.itech.guide.domain.member.controller..*)" + "&& @annotation(org.springframework.web.bind.annotation.PostMapping)")
     public void pointcut(){
 
     }

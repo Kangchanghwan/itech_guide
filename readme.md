@@ -1,6 +1,13 @@
 
 
 
+## Docker Image
+### REDIS
+> docker run -d --name redis -p 6379:6379 lgodl1598/redis:1.0
+### DATABASE
+> docker run -d -p 5432:5432 --name postgres lgodl1598/postgres:1.0
+
+
 
 # 도메인 작성 규칙
 
@@ -27,6 +34,16 @@
 7. URI 경로에는 소문자가 적합하다.
 8. 파일 확장자는 URI에 포함시키지 않는다.
 
+
+# static 생성자 명명 규칙
+> 생성자는 private가 원칙이다.
+1. from : 매개변수 하나를 받아서 해당 타입의 인스턴스를 반환하는 형변환 메서드 \
+ex) Date date = Date.from(instant);
+2. of : 여러개의 매개 변수를 받아서 객체를 생성
+3. getInstance | instance : 인스턴스를 생성. 이전에 반환했던 것과 같을 수 있음.
+4. newInstance | create : 새로운 인스턴스를 생성
+5. get[OtherType] : 다른 타입의 인스턴스를 생성. 이전에 반환했던 것과 같을 수 있음.
+6. new[OtherType] : 다른 타입의 새로운 인스턴스를 생성.
 ## dependencies
 - -----
 ### [io.jsonwebtoken](https://jwt.io/)
@@ -37,6 +54,3 @@
 ### [org.projectlombok:lombok](https://projectlombok.org/)
 ### [boot:spring-boot-starter-test](https://memostack.tistory.com/197)
 ### [org.springframework.boot:spring-boot-starter-security:2.7.0](https://spring.io/guides/gs/securing-web/)
-
-## Docker Image
-### docker run -d --name redis -p 6379:6379 lgodl1598/redis:1.0
