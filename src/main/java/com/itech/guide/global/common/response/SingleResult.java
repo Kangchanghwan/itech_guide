@@ -1,4 +1,4 @@
-package com.itech.guide.global.common.model;
+package com.itech.guide.global.common.response;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,6 +7,5 @@ import lombok.Setter;
 @Setter
 public class SingleResult<T> extends CommonResult{
 
-    private T data;
-
+    private T date;
 }

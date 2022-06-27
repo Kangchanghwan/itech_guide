@@ -1,0 +1,35 @@
+<configuration>
+
+    <!-- prod -->
+    <springProfile name="prod, test">
+        <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder>
+                <pattern>%-5level %d{yyyyMMdd HH:mm:ss.SSS} [%thread] [%logger{0}:%line] - %msg %n</pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>./logs/%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+                <totalSizeCap>5GB</totalSizeCap>
+            </rollingPolicy>
+        </appender>
+
+        <root level="info">
+            <appender-ref ref="file" />
+        </root>
+    </springProfile>
+
+    <!-- dev -->
+    <springProfile name="dev">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%-5level %d{yyyyMMdd HH:mm:ss.SSS} [%thread] [%logger{0}:%line] - %msg %n</pattern>
+            </encoder>
+        </appender>
+
+        <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+
+</configuration>

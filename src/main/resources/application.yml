@@ -1,9 +1,18 @@
 spring:
   profiles:
     active: dev
+  jwt:
+    secret-key: hibernate
+    access-token-invalid-hour: 10
+    refresh-token-invalid-hour: 60
+    blacklist:
+      access-token: logout
 
 springdoc:
   api-docs:
     path: /api-doc
   swagger-ui:
     path: swagger-ui-custom.html
+
+
+

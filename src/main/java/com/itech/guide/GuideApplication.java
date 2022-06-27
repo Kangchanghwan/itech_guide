@@ -1,7 +1,13 @@
 package com.itech.guide;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.itech.guide.domain.member.entity.Role;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class GuideApplication {
@@ -9,5 +15,16 @@ public class GuideApplication {
     public static void main(String[] args) {
         SpringApplication.run(GuideApplication.class, args);
     }
+
+    @Bean
+    public ObjectMapper getObjectMapper() {
+        return new ObjectMapper();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
 
 }

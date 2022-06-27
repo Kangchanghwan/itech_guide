@@ -1,11 +1,8 @@
 package com.itech.guide.domain.member.dto;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import com.itech.guide.domain.member.entity.Member;
+import lombok.*;
 
-@Builder
 @Getter
 @Setter
 public class MemberResponse {
@@ -14,4 +11,11 @@ public class MemberResponse {
     private String name;
     private int age;
 
+    public static MemberResponse from (Member member) {
+        MemberResponse response = new MemberResponse();
+        response.id = member.getId();
+        response.name = member.getName();
+        response.age = member.getAge();
+        return response;
+    }
 }
