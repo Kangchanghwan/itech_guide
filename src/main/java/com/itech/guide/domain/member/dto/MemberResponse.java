@@ -10,10 +10,11 @@ import lombok.*;
 public class MemberResponse {
 
     private Long id;
+    private String email;
     private String name;
     private int age;
 
     public static MemberResponse from (Member member) {
-       return new MemberResponse(member.getId(),member.getName(), member.getAge());
+       return new MemberResponse(member.getId(),member.getEmail(),member.getName(), member.getAge());
     }
 }

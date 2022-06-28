@@ -17,6 +17,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
         log.error("접근거부");
+        String exception = (String) request.getAttribute("exception");
         response.sendRedirect("/exception/entrypoint");
     }
 

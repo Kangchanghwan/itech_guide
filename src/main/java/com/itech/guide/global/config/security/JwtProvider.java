@@ -1,5 +1,6 @@
 package com.itech.guide.global.config.security;
 
+import com.itech.guide.domain.member.entity.Roles;
 import com.itech.guide.domain.member.service.CustomMemberDetailService;
 import com.itech.guide.global.common.redis.RedisService;
 import com.itech.guide.global.error.exception.BadRequestException;
@@ -15,7 +16,10 @@ import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import java.time.Duration;
 import java.util.Base64;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
+import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
@@ -48,9 +52,9 @@ public class JwtProvider {
     }
 
 
-    public String createToken(String userId, String roles,Long tokenInvalidTime){
+    public String createToken(String userId, Collection<Roles> roles,Long tokenInvalidTime){
         Claims claims = Jwts.claims().setSubject(userId); // claims 생성 및 payload 설정
-        claims.put("roles", roles); // 권한 설정, key/ value 쌍으로 저장
+        claims.put("roles", mergeStream(roles)); // 권한 설정, key/ value 쌍으로 저장
         Date date = new Date();
         return Jwts.builder()
                 .setClaims(claims) // 발행 유저 정보 저장
@@ -59,6 +63,11 @@ public class JwtProvider {
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY) // 해싱 알고리즘 및 키 설정
                 .compact(); // 생성
     }
+
+    private String mergeStream(Collection<Roles> roles) {
+        return roles.stream().map(role -> role.getRole().name()).collect(Collectors.joining(", "));
+    }
+
     public Authentication validateToken(HttpServletRequest request, String token) {
         String exception = "exception";
         try {
@@ -87,14 +96,14 @@ public class JwtProvider {
         return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody().getSubject();
     }
 
-    public String createAccessToken(String userId, String roles) {
+    public String createAccessToken(String userId, Collection<Roles> roles) {
 
         long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(accessTokenInvalidHour);
        // Long tokenInvalidTime = 1000L * 60 * 1; // 1m
         return this.createToken(userId, roles, tokenInvalidTime);
     }
 
-    public String createRefreshToken(String userId, String roles) {
+    public String createRefreshToken(String userId, Collection<Roles> roles) {
         long tokenInvalidTime = 1000L * 60 * 60 * Integer.parseInt(refreshTokenInvalidHour);
         String refreshToken = this.createToken(userId, roles, tokenInvalidTime);
         redisService.setValues(userId, refreshToken, Duration.ofMillis(tokenInvalidTime));

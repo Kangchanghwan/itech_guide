@@ -3,6 +3,7 @@ package com.itech.guide.domain.member.service;
 import com.itech.guide.domain.member.dto.LoginResponse;
 import com.itech.guide.domain.member.entity.Member;
 import com.itech.guide.domain.member.repository.MemberRepository;
+import com.itech.guide.domain.member.vo.LoginRequest;
 import com.itech.guide.domain.member.vo.ReIssueRequest;
 import com.itech.guide.global.common.response.CommonResult;
 import com.itech.guide.global.common.response.ResponseService;
@@ -27,12 +28,12 @@ public class MemberAccountService {
     private final ResponseService responseService;
 
 
-    public SingleResult<LoginResponse> login(String name, String password) {
+    public SingleResult<LoginResponse> login(LoginRequest loginRequest) {
         Member member = memberRepository
-                .findByName(name).orElseThrow(() -> new BadRequestException("아이디 혹은 비밀번호를 확인하세요."));
-        checkPassword(password, member.getPassword());
-        String accessToken = jwtProvider.createAccessToken(member.getName(), member.getRole());
-        String refreshToken = jwtProvider.createRefreshToken(member.getName(), member.getRole());
+                .findByEmail(loginRequest.getEmail()).orElseThrow(() -> new BadRequestException("아이디 혹은 비밀번호를 확인하세요."));
+        checkPassword(loginRequest.getPassword(), member.getPassword());
+        String accessToken = jwtProvider.createAccessToken(member.getEmail(), member.getRoles());
+        String refreshToken = jwtProvider.createRefreshToken(member.getEmail(), member.getRoles());
 
         return responseService.getSingleResult(LoginResponse.of(accessToken,refreshToken));
     }
@@ -46,9 +47,9 @@ public class MemberAccountService {
 
     public SingleResult<LoginResponse> reIssueAccessToken(ReIssueRequest reIssueRequest) {
         Member member = memberRepository
-                .findByName(reIssueRequest.getName()).orElseThrow(() -> new BadRequestException("존재하지 않는 유저입니다."));
-        jwtProvider.checkRefreshToken(reIssueRequest.getName(), reIssueRequest.getRefreshToken());
-        String accessToken = jwtProvider.createAccessToken(member.getName(), member.getRole());
+                .findByEmail(reIssueRequest.getEmail()).orElseThrow(() -> new BadRequestException("존재하지 않는 유저입니다."));
+        jwtProvider.checkRefreshToken(reIssueRequest.getEmail(), reIssueRequest.getRefreshToken());
+        String accessToken = jwtProvider.createAccessToken(member.getName(), member.getRoles());
         return responseService.getSingleResult(LoginResponse.of(accessToken,reIssueRequest.getRefreshToken()));
 
     }

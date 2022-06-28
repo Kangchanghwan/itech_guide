@@ -1,26 +1,26 @@
 package com.itech.guide.domain.member.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Enumerated;
 
-@Entity
+
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Role{
+public enum Role {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id")
-    private Long id;
+    ROLE_ADMIN("20","관리자"),
+    ROLE_SUPER_ADMIN("10","슈퍼 관리자"),
+    ROLE_MEMBER("1","회원"),
+    ROLE_TEMPORARY_MEMBER("2","임시회원");
 
-    @Column(name="role_name",nullable = false,unique = true)
+    private String code;
     private String name;
 
-    public Role(String name) {
+    Role(String code, String name) {
+
+        this.code = code;
         this.name = name;
+
     }
+
 }

@@ -28,11 +28,9 @@ public class RestApiAspect {
     private  ObjectMapper mapper;
 
     @Pointcut("within(com.itech.guide.domain.member.controller..*)" + "&& @annotation(org.springframework.web.bind.annotation.PostMapping)")
-    public void pointcut(){
-
+    public void postPointcut(){
     }
-
-    @Before("pointcut()")
+    @Before("postPointcut()")
     public void logMethod(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         PostMapping method = signature.getMethod().getAnnotation(PostMapping.class);
@@ -46,7 +44,7 @@ public class RestApiAspect {
         }
     }
 
-    @AfterReturning(pointcut = "pointcut()", returning = "entity")
+    @AfterReturning(pointcut = "postPointcut()", returning = "entity")
     public void logMethodAfter(JoinPoint joinPoint, ResponseEntity<?> entity) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         PostMapping mapping = signature.getMethod().getAnnotation(PostMapping.class);

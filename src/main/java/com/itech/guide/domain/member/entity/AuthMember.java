@@ -1,6 +1,5 @@
 package com.itech.guide.domain.member.entity;
 
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 import java.util.List;
@@ -11,7 +10,7 @@ public class AuthMember extends User {
     private final Member member;
 
     public AuthMember(Member member) {
-        super(member.getName(), member.getPassword(), List.of(new SimpleGrantedAuthority(member.getRole())));
+        super(member.getName(), member.getPassword(), member.getRoles());
         this.member = member;
     }
 

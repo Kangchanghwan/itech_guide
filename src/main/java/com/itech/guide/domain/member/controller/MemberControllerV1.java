@@ -17,6 +17,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,28 +65,27 @@ public class MemberControllerV1 {
     @PostMapping("/login")
     public ResponseEntity<SingleResult<LoginResponse>> login(@Valid @RequestBody LoginRequest loginDto) {
         return ResponseEntity.status(HttpStatus.OK)
-                .body(memberAccountService.login(loginDto.getName(), loginDto.getPassword()));
+                .body(memberAccountService.login(loginDto));
     }
 
     @PostMapping("/members")
     public ResponseEntity<SingleResult<MemberResponse>> signUp(@RequestBody @Valid SignUpRequest request){
-        log.info("[LOG] MemberControllerV1.SignUp Request : {}" , request);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(memberSignUpRestService.join(request)) ;
     }
 
     @GetMapping("/members/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<SingleResult<MemberResponse>> profile(@PathVariable Long id){
         log.info("[LOG] MemberControllerV1.profile : {}",id);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(memberProfileService.myProfile(id));
     }
-
     @GetMapping("/members")
-    public ResponseEntity<ListResult<MemberResponse>> memberList(){
-        log.info("[LOG] MemberControllerV1.memberList ");
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(memberListService.findAll());
+    @ResponseStatus(HttpStatus.OK)
+    public ListResult<MemberResponse> memberList(@AuthenticationPrincipal AuthMember member){
+        log.info("[LOG] MemberControllerV1.memberList {} ",member);
+        return memberListService.findAll();
     }
 
 

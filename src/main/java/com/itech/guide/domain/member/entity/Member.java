@@ -1,13 +1,12 @@
 package com.itech.guide.domain.member.entity;
 
 import com.itech.guide.domain.member.vo.SignUpRequest;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Objects;
 
 /**
@@ -29,15 +28,16 @@ import java.util.Objects;
 @Getter
 @Table(name="member_tb")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Member {
 
 
     public static Member from(SignUpRequest request){
         Member member = new Member();
-
         member.name = request.getName();
         member.password = request.getPassword();
         member.age = request.getAge();
+        member.email = request.getEmail();
 
         return member;
 
@@ -48,17 +48,25 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "member_email",nullable = false, unique = true ,length = 200)
+    private String email;
     @Column(name ="member_pwd",nullable = false,length = 200)
     private String password;
-    @Column(name ="member_name", unique = true , nullable = false , length = 50)
+    @Column(name ="member_name", nullable = false , length = 50)
     private String name;
     @Column(name = "member_age",nullable = false)
     private int age;
-    @Column(name = "member_role")
-    private String role;
 
-    public void addRole(String roleName){
-        this.role = roleName;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "member_roles",
+            joinColumns = @JoinColumn(name = "member_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Collection<Roles> roles = new ArrayList<>();
+
+    public void addRole(Roles role){
+        this.roles.add(role);
     }
 
     @Override

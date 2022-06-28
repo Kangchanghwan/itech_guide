@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -16,6 +17,7 @@ import static java.util.Arrays.stream;
 
 @Slf4j
 @RequiredArgsConstructor
+@Component
 public class CustomAuthorizationFilter extends OncePerRequestFilter {
 
     private final JwtProvider jwtProvider;
