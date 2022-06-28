@@ -2,7 +2,6 @@ package com.itech.guide.domain.member.entity;
 
 import lombok.Getter;
 
-import javax.persistence.Enumerated;
 
 
 @Getter
@@ -13,8 +12,8 @@ public enum Role {
     ROLE_MEMBER("1","회원"),
     ROLE_TEMPORARY_MEMBER("2","임시회원");
 
-    private String code;
-    private String name;
+    private final String code;
+    private final String name;
 
     Role(String code, String name) {
 

@@ -7,41 +7,40 @@ import com.itech.guide.global.error.exception.BadRequestException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 
-@ControllerAdvice
+@RestControllerAdvice
 @RequiredArgsConstructor
 @Slf4j
 public class GlobalExceptionHandler {
     private final ResponseService responseService;
 
     @ExceptionHandler(Exception.class)
-    protected ResponseEntity<CommonResult> handleException(Exception e) {
-        log.error("handleEntityNotFoundException", e);
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(responseService.getFailResult(ResponseCode.F_UNKNOWN_ERR));
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    protected CommonResult handleException(Exception e) {
+        return responseService.getFailResult(999,e.getMessage());
     }
 
     @ExceptionHandler(BindException.class)
-    protected ResponseEntity<CommonResult> handleClientRequestValidException(BindException exception){
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    protected CommonResult handleClientRequestValidException(BindException exception){
 //        String messages = exception.getBindingResult()
 //                .getFieldErrors()
 //                .stream()
 //                .map(e -> "["+ e.getCode() + "] "+ e.getDefaultMessage())
 //                .collect(Collectors.toList()).toString();
 
-        return  ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(responseService.getFailResult(ResponseCode.F_VALIDATION));
+        return  responseService.getFailResult(ResponseCode.F_VALIDATION);
 
     }
 
     @ExceptionHandler(BadRequestException.class)
-    public ResponseEntity<CommonResult> handleBadRequestException(BadRequestException e) {
-        return  ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(responseService.getFailResult(ResponseCode.F_UNKNOWN_ERR));
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public CommonResult handleBadRequestException(BadRequestException e) {
+        return  responseService.getFailResult(ResponseCode.F_UNKNOWN_ERR);
     }
 }

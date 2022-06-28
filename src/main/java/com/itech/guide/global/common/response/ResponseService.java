@@ -48,6 +48,14 @@ public class ResponseService {
         result.setMsg(errorResponse.message);
         return result;
     }
+
+    public CommonResult getFailResult(int code,String message){
+        CommonResult result = new CommonResult();
+        result.setSuccess(false);
+        result.setCode(code);
+        result.setMsg(message);
+        return result;
+    }
     /**
      * 코드와 Msg값을 가지는 열거형이다.
      * */

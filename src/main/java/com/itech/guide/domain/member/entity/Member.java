@@ -57,7 +57,7 @@ public class Member {
     @Column(name = "member_age",nullable = false)
     private int age;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "member_roles",
             joinColumns = @JoinColumn(name = "member_id"),

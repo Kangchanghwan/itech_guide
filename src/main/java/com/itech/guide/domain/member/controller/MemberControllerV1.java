@@ -16,10 +16,6 @@ import com.itech.guide.global.common.response.SingleResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.access.prepost.PostAuthorize;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,41 +46,40 @@ public class MemberControllerV1 {
 
 
     @PostMapping("/re-issue")
-    public ResponseEntity<SingleResult<LoginResponse>> reIssue(@Valid @RequestBody ReIssueRequest reIssueRequest) {
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(memberAccountService.reIssueAccessToken(reIssueRequest));
+    @ResponseStatus(HttpStatus.OK)
+    public SingleResult<LoginResponse> reIssue(@Valid @RequestBody ReIssueRequest reIssueRequest) {
+        return memberAccountService.reIssueAccessToken(reIssueRequest);
     }
 
     @GetMapping("/logout")
-    public ResponseEntity<CommonResult> logout(@AuthenticationPrincipal AuthMember member, HttpServletRequest request) {
-        return ResponseEntity.status(HttpStatus.OK).body(
-                memberAccountService.logout(member.getUsername(),
-                        request.getHeader("Authorization").substring(7)));
+    @ResponseStatus(HttpStatus.OK)
+    public CommonResult logout(@AuthenticationPrincipal AuthMember member, HttpServletRequest request) {
+        return memberAccountService.logout(member.getUsername(),
+                        request.getHeader("Authorization").substring(7));
     }
 
     @PostMapping("/login")
-    public ResponseEntity<SingleResult<LoginResponse>> login(@Valid @RequestBody LoginRequest loginDto) {
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(memberAccountService.login(loginDto));
+    @ResponseStatus(HttpStatus.OK)
+    public SingleResult<LoginResponse> login(@Valid @RequestBody LoginRequest loginDto) {
+        return memberAccountService.login(loginDto);
     }
 
     @PostMapping("/members")
-    public ResponseEntity<SingleResult<MemberResponse>> signUp(@RequestBody @Valid SignUpRequest request){
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(memberSignUpRestService.join(request)) ;
+    @ResponseStatus(HttpStatus.CREATED)
+    public SingleResult<MemberResponse> signUp(@RequestBody @Valid SignUpRequest request){
+        return memberSignUpRestService.join(request);
     }
 
     @GetMapping("/members/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<SingleResult<MemberResponse>> profile(@PathVariable Long id){
+    public SingleResult<MemberResponse> profile(@PathVariable Long id){
         log.info("[LOG] MemberControllerV1.profile : {}",id);
-        return ResponseEntity.status(HttpStatus.OK)
-                .body(memberProfileService.myProfile(id));
+        return memberProfileService.myProfile(id);
     }
     @GetMapping("/members")
     @ResponseStatus(HttpStatus.OK)
-    public ListResult<MemberResponse> memberList(@AuthenticationPrincipal AuthMember member){
-        log.info("[LOG] MemberControllerV1.memberList {} ",member);
+    public ListResult<MemberResponse> memberList(){
+        log.info("[LOG] MemberControllerV1.memberList");
         return memberListService.findAll();
     }
 

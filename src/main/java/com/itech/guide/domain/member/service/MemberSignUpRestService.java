@@ -29,7 +29,8 @@ public class MemberSignUpRestService {
         checkPasswordConvention(request.getPassword());
         request.setPassword(passwordEncoder.encode(request.getPassword()));
         Member member = Member.from(request);
-        member.addRole(roleRepository.findById(Role.ROLE_TEMPORARY_MEMBER.getCode()).get());
+        member.addRole(roleRepository.findById(Role.ROLE_TEMPORARY_MEMBER.getCode())
+                .orElseThrow(()-> new IllegalArgumentException("해당하는 권한이 없습니다.")));
         memberRepository.save(member);
         return responseService.getSingleResult(MemberResponse.from(member));
 
