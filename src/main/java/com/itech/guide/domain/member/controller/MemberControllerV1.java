@@ -16,6 +16,7 @@ import com.itech.guide.global.common.response.SingleResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -70,12 +71,14 @@ public class MemberControllerV1 {
         return memberSignUpRestService.join(request);
     }
 
-    @GetMapping("/members/{id}")
+    @PreAuthorize("#email == authentication.principal.username or hasAnyRole('ROLE_ADMIN')")
+    @GetMapping("/members/{email}")
     @ResponseStatus(HttpStatus.OK)
-    public SingleResult<MemberResponse> profile(@PathVariable Long id){
-        log.info("[LOG] MemberControllerV1.profile : {}",id);
-        return memberProfileService.myProfile(id);
+    public SingleResult<MemberResponse> profile( @PathVariable String email){
+        log.info("[LOG] MemberControllerV1.profile : {}",email);
+        return memberProfileService.myProfile(email);
     }
+
     @GetMapping("/members")
     @ResponseStatus(HttpStatus.OK)
     public ListResult<MemberResponse> memberList(){

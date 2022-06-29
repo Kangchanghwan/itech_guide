@@ -49,7 +49,7 @@ public class MemberAccountService {
         Member member = memberRepository
                 .findByEmail(reIssueRequest.getEmail()).orElseThrow(() -> new BadRequestException("존재하지 않는 유저입니다."));
         jwtProvider.checkRefreshToken(reIssueRequest.getEmail(), reIssueRequest.getRefreshToken());
-        String accessToken = jwtProvider.createAccessToken(member.getName(), member.getRoles());
+        String accessToken = jwtProvider.createAccessToken(member.getEmail(), member.getRoles());
         return responseService.getSingleResult(LoginResponse.of(accessToken,reIssueRequest.getRefreshToken()));
 
     }

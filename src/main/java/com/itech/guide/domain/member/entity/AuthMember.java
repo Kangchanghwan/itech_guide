@@ -10,7 +10,7 @@ public class AuthMember extends User {
     private final Member member;
 
     public AuthMember(Member member) {
-        super(member.getName(), member.getPassword(), member.getRoles());
+        super(member.getEmail(), member.getPassword(), member.getRoles());
         this.member = member;
     }
 

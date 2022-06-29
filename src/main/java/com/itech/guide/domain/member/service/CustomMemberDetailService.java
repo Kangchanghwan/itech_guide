@@ -20,6 +20,7 @@ public class CustomMemberDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+
         Member member = memberRepository.findByEmail(email)
                 .orElseThrow(() -> new BadRequestException("토큰을 확인하세요."));
         return new AuthMember(member);

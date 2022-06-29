@@ -17,7 +17,6 @@ import static java.util.Arrays.stream;
 
 @Slf4j
 @RequiredArgsConstructor
-@Component
 public class CustomAuthorizationFilter extends OncePerRequestFilter {
 
     private final JwtProvider jwtProvider;

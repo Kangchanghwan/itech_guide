@@ -2,10 +2,13 @@
 
 
 ## Docker Image
+
+### Network
+> docker network create --driver=bridge --gateway 172.19.0.1 --subnet 172.19.0.0/16 guide-network
 ### REDIS
-> docker run -d --name redis -p 6379:6379 lgodl1598/redis:1.0
+> docker run -d --network guide-network --name redis -p 6379:6379 lgodl1598/redis:1.0
 ### DATABASE
-> docker run -d -p 5432:5432 --name postgres lgodl1598/postgres:1.0
+> docker run -d --network guide-network -p 5432:5432 --name postgres lgodl1598/postgres:1.0
 
 
 
@@ -54,3 +57,27 @@ ex) Date date = Date.from(instant);
 ### [org.projectlombok:lombok](https://projectlombok.org/)
 ### [boot:spring-boot-starter-test](https://memostack.tistory.com/197)
 ### [org.springframework.boot:spring-boot-starter-security:2.7.0](https://spring.io/guides/gs/securing-web/)
+
+
+## 응답 규칙
+
+
+```ecma script level 4
+{
+    "success": true,
+    "code": 0,
+    "msg": "성공하였습니다.",
+    "date": {
+        "id": 38,
+        "email": "test1@naver.com",
+        "name": "test",
+        "age": 0
+    }
+}
+```
+
+## JWT 구조
+
+![img.png](img.png)
+
+

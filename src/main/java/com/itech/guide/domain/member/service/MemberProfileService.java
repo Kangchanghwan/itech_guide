@@ -18,9 +18,9 @@ public class MemberProfileService {
     private final MemberRepository memberRepository;
     private final ResponseService responseService;
 
-    public SingleResult<MemberResponse> myProfile(Long id){
+    public SingleResult<MemberResponse> myProfile(String email){
         return responseService.getSingleResult(MemberResponse.from(
-                memberRepository.findById(id).orElseThrow(
+                memberRepository.findByEmail(email).orElseThrow(
                 () -> {
                     log.error("[error] ProfileService.findOne : 유저를 찾을 수 없습니다.");
                     return new IllegalArgumentException("유저를 찾을 수 없습니다.");

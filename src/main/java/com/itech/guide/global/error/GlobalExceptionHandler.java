@@ -25,22 +25,5 @@ public class GlobalExceptionHandler {
         return responseService.getFailResult(999,e.getMessage());
     }
 
-    @ExceptionHandler(BindException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    protected CommonResult handleClientRequestValidException(BindException exception){
-//        String messages = exception.getBindingResult()
-//                .getFieldErrors()
-//                .stream()
-//                .map(e -> "["+ e.getCode() + "] "+ e.getDefaultMessage())
-//                .collect(Collectors.toList()).toString();
 
-        return  responseService.getFailResult(ResponseCode.F_VALIDATION);
-
-    }
-
-    @ExceptionHandler(BadRequestException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public CommonResult handleBadRequestException(BadRequestException e) {
-        return  responseService.getFailResult(ResponseCode.F_UNKNOWN_ERR);
-    }
 }

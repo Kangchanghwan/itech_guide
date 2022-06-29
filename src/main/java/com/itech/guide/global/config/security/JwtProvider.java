@@ -15,10 +15,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import java.time.Duration;
-import java.util.Base64;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Component
@@ -55,6 +52,8 @@ public class JwtProvider {
     public String createToken(String userId, Collection<Roles> roles,Long tokenInvalidTime){
         Claims claims = Jwts.claims().setSubject(userId); // claims 생성 및 payload 설정
         claims.put("roles", mergeStream(roles)); // 권한 설정, key/ value 쌍으로 저장
+        claims.setId(UUID.randomUUID().toString());
+        claims.put("https://itech.com/jwt_claims",true);
         Date date = new Date();
         return Jwts.builder()
                 .setClaims(claims) // 발행 유저 정보 저장
