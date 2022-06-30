@@ -15,7 +15,9 @@ import java.util.Arrays;
 @Transactional
 public class InitRole {
 
+
     private final RoleRepository roleRepository;
+
 
     @PostConstruct
     public void initRoleData(){

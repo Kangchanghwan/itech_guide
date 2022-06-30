@@ -42,7 +42,7 @@ public class SecurityConfiguration {
                 .antMatchers(POST,"/api/**/login").permitAll()
 
                 .antMatchers(GET,"/api/v1/members").access("hasRole('ROLE_ADMIN')") // ROLE_ADMIN 권한을 가진 사용자만 접근 허용
-                .antMatchers("/api/v1/members/**").access("hasRole('ROLE_TEMPORARY_MEMBER')") // ROLE_MEMBER 권한을 가진 사용자만 접근 허용
+                .antMatchers("/api/v1/members/**").access("hasRole('ROLE_TEMPORARY_MEMBER')") // ROLE_TEMPORARY_MEMBER 권한을 가진 사용자만 접근 허용
 
                 .antMatchers("/api/**/re-issue").authenticated() // 인증된 사용자만 접근 허용
                 .antMatchers(GET,"/api/**/members","/api/**/members/**").authenticated()
