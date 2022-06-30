@@ -15,6 +15,7 @@ import com.itech.guide.global.common.response.ListResult;
 import com.itech.guide.global.common.response.SingleResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -44,7 +45,6 @@ public class MemberControllerV1 {
     private final MemberProfileService memberProfileService;
     private final MemberAccountService memberAccountService;
     private final MemberListService memberListService;
-
 
     @PostMapping("/re-issue")
     @ResponseStatus(HttpStatus.OK)
@@ -81,10 +81,10 @@ public class MemberControllerV1 {
 
     @GetMapping("/members")
     @ResponseStatus(HttpStatus.OK)
-    public ListResult<MemberResponse> memberList(){
+    public ListResult<MemberResponse> memberList(
+            @RequestParam("page") Integer page, @RequestParam("size") Integer size){
         log.info("[LOG] MemberControllerV1.memberList");
-        return memberListService.findAll();
+        return memberListService.findAll(PageRequest.of(page,size));
     }
-
 
 }

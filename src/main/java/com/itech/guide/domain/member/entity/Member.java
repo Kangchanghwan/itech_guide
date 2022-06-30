@@ -1,7 +1,10 @@
 package com.itech.guide.domain.member.entity;
 
 import com.itech.guide.domain.member.vo.SignUpRequest;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
@@ -23,12 +26,12 @@ import java.util.Objects;
  * 11. 줄임말을 지양하고 정확한 이름을 사용한다.
  * */
 
-@ToString(of = "name")
 @Entity
 @Getter
 @Table(name="member_tb")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+//@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Member {
 
 
@@ -38,10 +41,10 @@ public class Member {
         member.password = request.getPassword();
         member.age = request.getAge();
         member.email = request.getEmail();
-
         return member;
-
     }
+
+
 
     @Id
     @Column(name = "member_id")

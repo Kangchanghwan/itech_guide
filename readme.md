@@ -63,6 +63,7 @@ ex) Date date = Date.from(instant);
 ### [org.projectlombok:lombok](https://projectlombok.org/)
 ### [boot:spring-boot-starter-test](https://memostack.tistory.com/197)
 ### [org.springframework.boot:spring-boot-starter-security:2.7.0](https://spring.io/guides/gs/securing-web/)
+### org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE
 
 
 ## 응답 규칙
