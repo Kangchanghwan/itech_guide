@@ -7,9 +7,26 @@ spring:
     refresh-token-invalid-hour: 60
     blacklist:
       access-token: logout
-
-
-
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
+    credentials:
+      access-key: AKIAQCT565N25DUYOEV6
+      secret-key: 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
+    s3:
+      bucket: gregorytest
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
 
 
 

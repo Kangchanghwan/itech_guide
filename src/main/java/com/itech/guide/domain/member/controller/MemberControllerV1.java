@@ -13,14 +13,20 @@ import com.itech.guide.domain.member.vo.SignUpRequest;
 import com.itech.guide.global.common.response.CommonResult;
 import com.itech.guide.global.common.response.ListResult;
 import com.itech.guide.global.common.response.SingleResult;
+import com.itech.guide.global.log.NoLogging;
+import com.itech.guide.infra.s3.S3Uploader;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -46,6 +52,7 @@ public class MemberControllerV1 {
     private final MemberAccountService memberAccountService;
     private final MemberListService memberListService;
 
+    private final S3Uploader s3Uploader;
     @PostMapping("/re-issue")
     @ResponseStatus(HttpStatus.OK)
     public SingleResult<LoginResponse> reIssue(@Valid @RequestBody ReIssueRequest reIssueRequest) {
@@ -85,6 +92,18 @@ public class MemberControllerV1 {
             @RequestParam("page") Integer page, @RequestParam("size") Integer size){
         log.info("[LOG] MemberControllerV1.memberList");
         return memberListService.findAll(PageRequest.of(page,size));
+    }
+
+    @PostMapping(value = "/image")
+    public ResponseEntity<String> updateUserImage(@RequestPart("images") MultipartFile multipartFile) {
+        String url;
+        try {
+            url = s3Uploader.uploadFiles(multipartFile, "static");
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        }
+        return new ResponseEntity(url,HttpStatus.OK);
     }
 
 }

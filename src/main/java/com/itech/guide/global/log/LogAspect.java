@@ -20,7 +20,8 @@ public class LogAspect {
 
     @Around("execution(* com.itech.guide..*Controller.*(..))||" +
             "execution(* com.itech.guide..*Service.*(..))||" +
-            "execution(* com.itech.guide..*Repository.*(..))")
+            "execution(* com.itech.guide..*Repository.*(..))&&" +
+            "!@annotation(com.itech.guide.global.log.NoLogging)")
     public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
         TraceStatusVO status = null;
         boolean hasException = false;

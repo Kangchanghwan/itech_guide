@@ -1,4 +1,8 @@
 
+## START
+> VM옵션 -> -Dcom.amazonaws.sdk.disableEc2Metadata=true 
+
+- EC2인스턴스 연결시도를 막아놓는다.
 
 
 ## Docker Image

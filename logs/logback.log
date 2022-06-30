@@ -1,0 +1,378 @@
+[2022-07-01 01:45:41:8872165][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48m8s406ms).
+[2022-07-01 03:13:48:14159641][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h28m7s475ms).
+[2022-07-01 05:02:02:20653733][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48m14s92ms).
+[2022-07-01 05:20:14:21744960][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m11s227ms).
+[2022-07-01 06:14:05:24976303][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m51s308ms).
+[2022-07-01 06:15:00:25031349][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s81ms).
+[2022-07-01 06:16:04:25095252][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s581ms).
+[2022-07-01 06:20:38:25369669][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s356ms).
+[2022-07-01 06:22:35:25486381][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:22:35:25486396][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-07-01 06:22:35:25486403][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-07-01 06:22:38:524][restartedMain] INFO  com.itech.guide.GuideApplication - Starting GuideApplication using Java 17.0.2 on gangchanghwan-ui-MacBookPro.local with PID 15662 (/Users/gangchanghwan/Documents/msa/guide/build/classes/java/main started by gangchanghwan in /Users/gangchanghwan/Documents/msa/guide)
+[2022-07-01 06:22:38:524][background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+[2022-07-01 06:22:38:524][restartedMain] INFO  com.itech.guide.GuideApplication - The following 1 profile is active: "dev"
+[2022-07-01 06:22:38:558][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-07-01 06:22:38:558][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2022-07-01 06:22:38:1008][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:22:38:1008][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:22:38:1031][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:22:39:1194][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:22:39:1194][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-07-01 06:22:39:1253][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+[2022-07-01 06:22:39:1258][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:22:39:1258][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:22:39:1264][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.MemberRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:22:39:1264][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:22:39:1264][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:22:39:1542][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#4ecf5eee' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:22:39:1543][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#25212fa5' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:22:39:1551][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#36ffc83e' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:22:39:1553][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:22:39:1553][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:22:39:1950][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2022-07-01 06:22:39:1957][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:22:39:1957][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-07-01 06:22:39:1957][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-07-01 06:22:39:2013][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-07-01 06:22:39:2013][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1455 ms
+[2022-07-01 06:22:39:2163][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-07-01 06:22:40:2212][restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-07-01 06:22:40:2313][restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-07-01 06:22:40:2368][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-07-01 06:22:40:2436][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-07-01 06:22:40:2451][restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL92Dialect
+[2022-07-01 06:22:40:2915][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-07-01 06:22:40:2920][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:22:41:3925][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------127.0.0.1/9f864b7e's transaction start------------------------------
+[2022-07-01 06:22:41:3926][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [127.0.0.1/9f864b7e] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:22:41:3954][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        member_tb member0_
+[2022-07-01 06:22:41:3962][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [127.0.0.1/9f864b7e] Return:long org.springframework.data.repository.CrudRepository.count() time = 37ms
+[2022-07-01 06:22:41:3962][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------127.0.0.1/9f864b7e's transaction end/37ms-------------------------
+[2022-07-01 06:22:41:3965][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------127.0.0.1/045957c4's transaction start------------------------------
+[2022-07-01 06:22:41:3965][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [127.0.0.1/045957c4] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:22:41:3967][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        role_tb roles0_
+[2022-07-01 06:22:41:3970][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [127.0.0.1/045957c4] Return:long org.springframework.data.repository.CrudRepository.count() time = 5ms
+[2022-07-01 06:22:41:3970][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------127.0.0.1/045957c4's transaction end/5ms-------------------------
+[2022-07-01 06:22:41:4144][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31c27e26, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e0cc717, org.springframework.security.web.context.SecurityContextPersistenceFilter@18b3f51f, org.springframework.security.web.header.HeaderWriterFilter@d3ffd08, org.springframework.security.web.authentication.logout.LogoutFilter@1d6bba22, com.itech.guide.global.config.security.CustomAuthorizationFilter@6026267b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f9deff8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@522d98aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e6fa431, org.springframework.security.web.session.SessionManagementFilter@11e3d85f, org.springframework.security.web.access.ExceptionTranslationFilter@4cdff1b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@504bdf55]
+[2022-07-01 06:22:41:4148][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/exception/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2022-07-01 06:22:41:4148][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/exception/**']
+[2022-07-01 06:22:42:4231][restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-07-01 06:22:42:4611][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2022-07-01 06:22:42:4708][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:22:42:4729][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-07-01 06:22:42:4739][restartedMain] INFO  com.itech.guide.GuideApplication - Started GuideApplication in 4.564 seconds (JVM running for 5.184)
+[2022-07-01 06:25:26:168376][Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:25:26:168380][Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-07-01 06:25:26:168382][Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-07-01 06:25:26:168485][restartedMain] INFO  com.itech.guide.GuideApplication - Starting GuideApplication using Java 17.0.2 on gangchanghwan-ui-MacBookPro.local with PID 15662 (/Users/gangchanghwan/Documents/msa/guide/build/classes/java/main started by gangchanghwan in /Users/gangchanghwan/Documents/msa/guide)
+[2022-07-01 06:25:26:168485][restartedMain] INFO  com.itech.guide.GuideApplication - The following 1 profile is active: "dev"
+[2022-07-01 06:25:26:168612][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:25:26:168612][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:25:26:168614][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:25:26:168647][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:25:26:168647][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-07-01 06:25:26:168657][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+[2022-07-01 06:25:26:168659][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:25:26:168659][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:25:26:168662][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.MemberRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:25:26:168662][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:25:26:168662][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:25:26:168708][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#12287e59' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:25:26:168709][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#bb7182a' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:25:26:168710][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#7740cb7' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:25:26:168711][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:25:26:168711][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:25:26:168786][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2022-07-01 06:25:26:168787][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:25:26:168787][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-07-01 06:25:26:168787][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-07-01 06:25:26:168796][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-07-01 06:25:26:168796][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 308 ms
+[2022-07-01 06:25:26:168842][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-07-01 06:25:26:168846][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[2022-07-01 06:25:26:168861][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[2022-07-01 06:25:26:168861][restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL92Dialect
+[2022-07-01 06:25:26:168919][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-07-01 06:25:26:168919][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:25:26:169026][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/bd9973e5's transaction start------------------------------
+[2022-07-01 06:25:26:169026][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/bd9973e5] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:25:26:169035][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        member_tb member0_
+[2022-07-01 06:25:26:169038][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/bd9973e5] Return:long org.springframework.data.repository.CrudRepository.count() time = 12ms
+[2022-07-01 06:25:26:169038][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/bd9973e5's transaction end/12ms-------------------------
+[2022-07-01 06:25:26:169058][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/befafe48's transaction start------------------------------
+[2022-07-01 06:25:26:169058][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/befafe48] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:25:26:169059][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        role_tb roles0_
+[2022-07-01 06:25:26:169063][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/befafe48] Return:long org.springframework.data.repository.CrudRepository.count() time = 5ms
+[2022-07-01 06:25:26:169063][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/befafe48's transaction end/5ms-------------------------
+[2022-07-01 06:25:27:169204][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1558222b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6619b71f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d4ce27d, org.springframework.security.web.header.HeaderWriterFilter@606ac2d0, org.springframework.security.web.authentication.logout.LogoutFilter@1c5e83fc, com.itech.guide.global.config.security.CustomAuthorizationFilter@3eba894b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@abacd40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c70e285, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c735360, org.springframework.security.web.session.SessionManagementFilter@79406221, org.springframework.security.web.access.ExceptionTranslationFilter@434e81fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@163a862a]
+[2022-07-01 06:25:27:169207][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/exception/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2022-07-01 06:25:27:169207][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/exception/**']
+[2022-07-01 06:25:27:169252][restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-07-01 06:25:27:169464][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2022-07-01 06:25:27:169492][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:25:27:169494][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-07-01 06:25:27:169499][restartedMain] INFO  com.itech.guide.GuideApplication - Started GuideApplication in 1.063 seconds (JVM running for 169.942)
+[2022-07-01 06:25:27:169501][restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+[2022-07-01 06:26:04:206634][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:26:04:206635][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[2022-07-01 06:26:04:206637][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[2022-07-01 06:26:07:464][background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+[2022-07-01 06:26:07:466][restartedMain] INFO  com.itech.guide.GuideApplication - Starting GuideApplication using Java 17.0.2 on gangchanghwan-ui-MacBookPro.local with PID 15700 (/Users/gangchanghwan/Documents/msa/guide/build/classes/java/main started by gangchanghwan in /Users/gangchanghwan/Documents/msa/guide)
+[2022-07-01 06:26:07:466][restartedMain] INFO  com.itech.guide.GuideApplication - The following 1 profile is active: "dev"
+[2022-07-01 06:26:07:505][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-07-01 06:26:07:505][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2022-07-01 06:26:07:1077][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:26:07:1078][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:26:07:1093][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:26:08:1237][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:26:08:1237][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-07-01 06:26:08:1294][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
+[2022-07-01 06:26:08:1299][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:26:08:1299][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:26:08:1305][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.MemberRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:26:08:1306][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:26:08:1306][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:26:08:1558][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#7d6fcd78' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:26:08:1559][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#5eac8517' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:26:08:1565][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#6d9f7159' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:26:08:1567][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:26:08:1568][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:26:08:1984][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2022-07-01 06:26:08:1991][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:26:08:1992][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-07-01 06:26:08:1992][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-07-01 06:26:08:2070][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-07-01 06:26:08:2071][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1565 ms
+[2022-07-01 06:26:09:2231][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-07-01 06:26:09:2264][restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-07-01 06:26:09:2342][restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-07-01 06:26:09:2397][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-07-01 06:26:09:2461][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-07-01 06:26:09:2473][restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL92Dialect
+[2022-07-01 06:26:09:2850][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-07-01 06:26:09:2854][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:26:10:3705][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/93d5f8c5's transaction start------------------------------
+[2022-07-01 06:26:10:3705][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/93d5f8c5] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:26:10:3728][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        member_tb member0_
+[2022-07-01 06:26:10:3735][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/93d5f8c5] Return:long org.springframework.data.repository.CrudRepository.count() time = 29ms
+[2022-07-01 06:26:10:3735][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/93d5f8c5's transaction end/29ms-------------------------
+[2022-07-01 06:26:10:3737][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/4779af32's transaction start------------------------------
+[2022-07-01 06:26:10:3737][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/4779af32] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:26:10:3739][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        role_tb roles0_
+[2022-07-01 06:26:10:3742][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/4779af32] Return:long org.springframework.data.repository.CrudRepository.count() time = 5ms
+[2022-07-01 06:26:10:3742][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/4779af32's transaction end/5ms-------------------------
+[2022-07-01 06:26:10:3869][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50ade4d7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77738fe2, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ce6deb8, org.springframework.security.web.header.HeaderWriterFilter@16bb6319, org.springframework.security.web.authentication.logout.LogoutFilter@4b9f08a0, com.itech.guide.global.config.security.CustomAuthorizationFilter@3ed2ff55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23a103f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e89d007, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@488b9e19, org.springframework.security.web.session.SessionManagementFilter@1dbdb700, org.springframework.security.web.access.ExceptionTranslationFilter@40d4faa3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21889ad1]
+[2022-07-01 06:26:10:3876][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/exception/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2022-07-01 06:26:10:3876][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/exception/**']
+[2022-07-01 06:26:10:3945][restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-07-01 06:26:11:4284][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2022-07-01 06:26:11:4342][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:26:11:4353][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-07-01 06:26:11:4362][restartedMain] INFO  com.itech.guide.GuideApplication - Started GuideApplication in 4.19 seconds (JVM running for 4.648)
+[2022-07-01 06:26:30:24096][http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-07-01 06:26:30:24096][http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-07-01 06:26:30:24097][http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2022-07-01 06:26:30:24107][http-nio-8080-exec-2] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/7613b577's transaction start------------------------------
+[2022-07-01 06:26:30:24108][http-nio-8080-exec-2] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/7613b577] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) ,args = [logouteyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BuYXZlci5jb20iLCJqdGkiOiI3Mzc5MTZjMi1kMGU5LTQ4MmItODI3ZC1lY2M0OGQ5MGZmY2MiLCJodHRwczovL2l0ZWNoLmNvbS9qd3RfY2xhaW1zIjp0cnVlLCJpYXQiOjE2NTY1NzMwMjYsImV4cCI6MTY1NjYwOTAyNn0.JpkPrIF0fbxMeUogcYyQ_3Vbvjst2serzXp-qiwBGz8]
+[2022-07-01 06:26:31:24408][http-nio-8080-exec-2] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/7613b577] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) time = 301ms
+[2022-07-01 06:26:31:24408][http-nio-8080-exec-2] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/7613b577's transaction end/301ms-------------------------
+[2022-07-01 06:26:31:24445][http-nio-8080-exec-2] ERROR c.i.g.g.c.s.CustomAuthenticationEntryPoint - 접근거부
+[2022-07-01 06:26:31:24465][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/a1308038's transaction start------------------------------
+[2022-07-01 06:26:31:24465][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/a1308038] Return:ResponseEntity com.itech.guide.global.error.controller.ExceptionController.entrypointException() ,args = []
+[2022-07-01 06:26:31:24468][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/a1308038]  Return:ResponseEntity com.itech.guide.global.error.controller.ExceptionController.entrypointException() time = 3ms ex=com.itech.guide.global.error.exception.CAuthenticationEntryPointException: 해당 리소스에 접근하기 위한 권한이 없습니다.
+[2022-07-01 06:26:31:24468][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/a1308038's transaction end/3ms-------------------------
+[2022-07-01 06:26:31:24500][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/e246ef6b's transaction start------------------------------
+[2022-07-01 06:26:31:24500][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/e246ef6b] Return:CommonResult com.itech.guide.global.common.response.ResponseService.getFailResult(int,String) ,args = [999, 해당 리소스에 접근하기 위한 권한이 없습니다.]
+[2022-07-01 06:26:31:24502][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/e246ef6b] Return:CommonResult com.itech.guide.global.common.response.ResponseService.getFailResult(int,String) time = 2ms
+[2022-07-01 06:26:31:24503][http-nio-8080-exec-3] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/e246ef6b's transaction end/2ms-------------------------
+[2022-07-01 06:26:31:24524][http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.itech.guide.global.error.exception.CAuthenticationEntryPointException: 해당 리소스에 접근하기 위한 권한이 없습니다.]
+[2022-07-01 06:27:23:76226][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/dc1d0518's transaction start------------------------------
+[2022-07-01 06:27:23:76226][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/dc1d0518] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) ,args = [logouteyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BuYXZlci5jb20iLCJqdGkiOiI3Mzc5MTZjMi1kMGU5LTQ4MmItODI3ZC1lY2M0OGQ5MGZmY2MiLCJodHRwczovL2l0ZWNoLmNvbS9qd3RfY2xhaW1zIjp0cnVlLCJpYXQiOjE2NTY1NzMwMjYsImV4cCI6MTY1NjYwOTAyNn0.JpkPrIF0fbxMeUogcYyQ_3Vbvjst2serzXp-qiwBGz8]
+[2022-07-01 06:27:23:76227][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/dc1d0518] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) time = 1ms
+[2022-07-01 06:27:23:76227][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/dc1d0518's transaction end/1ms-------------------------
+[2022-07-01 06:27:23:76293][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/fe38837f's transaction start------------------------------
+[2022-07-01 06:27:23:76293][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] Return:SingleResult com.itech.guide.domain.member.service.MemberAccountService.login(LoginRequest) ,args = [com.itech.guide.domain.member.vo.LoginRequest@416038ca]
+[2022-07-01 06:27:23:76297][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |-->Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) ,args = [test3@naver.com]
+[2022-07-01 06:27:23:76303][http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        member0_.member_id as member_i1_1_0_,
+        roles2_.role_id as role_id1_2_1_,
+        member0_.member_age as member_a2_1_0_,
+        member0_.member_email as member_e3_1_0_,
+        member0_.member_name as member_n4_1_0_,
+        member0_.member_pwd as member_p5_1_0_,
+        roles2_.roles_role as roles_ro2_2_1_,
+        roles1_.member_id as member_i1_0_0__,
+        roles1_.role_id as role_id2_0_0__ 
+    from
+        member_tb member0_ 
+    inner join
+        member_roles roles1_ 
+            on member0_.member_id=roles1_.member_id 
+    inner join
+        role_tb roles2_ 
+            on roles1_.role_id=roles2_.role_id 
+    where
+        member0_.member_email=?
+[2022-07-01 06:27:23:76324][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |<--Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) time = 27ms
+[2022-07-01 06:27:23:76412][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |-->Return:void com.itech.guide.global.common.redis.RedisService.setValues(String,String,Duration) ,args = [test3@naver.com, eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BuYXZlci5jb20iLCJqdGkiOiIxZmEyNjMxMi03YzczLTQ2NWYtYTY2MC03YTJhZWNiZTQwYTgiLCJodHRwczovL2l0ZWNoLmNvbS9qd3RfY2xhaW1zIjp0cnVlLCJpYXQiOjE2NTY2MjQ0NDMsImV4cCI6MTY1Njg0MDQ0M30.HQH9gMJwvwEZGsg6c8kCdQ3s6djBuwmlf_xnkP1d1R0, PT60H]
+[2022-07-01 06:27:23:76420][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |<--Return:void com.itech.guide.global.common.redis.RedisService.setValues(String,String,Duration) time = 8ms
+[2022-07-01 06:27:23:76421][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |-->Return:SingleResult com.itech.guide.global.common.response.ResponseService.getSingleResult(Object) ,args = [com.itech.guide.domain.member.dto.LoginResponse@4dcf277c]
+[2022-07-01 06:27:23:76421][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] |<--Return:SingleResult com.itech.guide.global.common.response.ResponseService.getSingleResult(Object) time = 0ms
+[2022-07-01 06:27:23:76421][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/fe38837f] Return:SingleResult com.itech.guide.domain.member.service.MemberAccountService.login(LoginRequest) time = 128ms
+[2022-07-01 06:27:23:76421][http-nio-8080-exec-4] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/fe38837f's transaction end/128ms-------------------------
+[2022-07-01 06:27:49:103098][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/a5b90b28's transaction start------------------------------
+[2022-07-01 06:27:49:103098][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/a5b90b28] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) ,args = [logouteyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BuYXZlci5jb20iLCJqdGkiOiIwYjBmZmRjZi00NWUyLTQ2MmItOTVkNS02YWI1YWUxYjRkODYiLCJodHRwczovL2l0ZWNoLmNvbS9qd3RfY2xhaW1zIjp0cnVlLCJpYXQiOjE2NTY2MjQ0NDMsImV4cCI6MTY1NjY2MDQ0M30.h7oug53i6s4T-sGPaZ5Hgmvp4Quuckdkq3yxLJ3TwUM]
+[2022-07-01 06:27:49:103099][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/a5b90b28] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) time = 1ms
+[2022-07-01 06:27:49:103099][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/a5b90b28's transaction end/1ms-------------------------
+[2022-07-01 06:27:49:103109][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/82082736's transaction start------------------------------
+[2022-07-01 06:27:49:103109][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/82082736] Return:UserDetails com.itech.guide.domain.member.service.CustomMemberDetailService.loadUserByUsername(String) ,args = [test3@naver.com]
+[2022-07-01 06:27:49:103111][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/82082736] |-->Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) ,args = [test3@naver.com]
+[2022-07-01 06:27:49:103112][http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        member0_.member_id as member_i1_1_0_,
+        roles2_.role_id as role_id1_2_1_,
+        member0_.member_age as member_a2_1_0_,
+        member0_.member_email as member_e3_1_0_,
+        member0_.member_name as member_n4_1_0_,
+        member0_.member_pwd as member_p5_1_0_,
+        roles2_.roles_role as roles_ro2_2_1_,
+        roles1_.member_id as member_i1_0_0__,
+        roles1_.role_id as role_id2_0_0__ 
+    from
+        member_tb member0_ 
+    inner join
+        member_roles roles1_ 
+            on member0_.member_id=roles1_.member_id 
+    inner join
+        role_tb roles2_ 
+            on roles1_.role_id=roles2_.role_id 
+    where
+        member0_.member_email=?
+[2022-07-01 06:27:49:103114][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/82082736] |<--Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) time = 3ms
+[2022-07-01 06:27:49:103115][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/82082736] Return:UserDetails com.itech.guide.domain.member.service.CustomMemberDetailService.loadUserByUsername(String) time = 6ms
+[2022-07-01 06:27:49:103115][http-nio-8080-exec-6] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/82082736's transaction end/6ms-------------------------
+[2022-07-01 06:28:17:131032][SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:28:17:131035][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-07-01 06:28:17:131037][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-07-01 06:28:20:363][background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+[2022-07-01 06:28:20:363][restartedMain] INFO  com.itech.guide.GuideApplication - Starting GuideApplication using Java 17.0.2 on gangchanghwan-ui-MacBookPro.local with PID 15725 (/Users/gangchanghwan/Documents/msa/guide/build/classes/java/main started by gangchanghwan in /Users/gangchanghwan/Documents/msa/guide)
+[2022-07-01 06:28:20:364][restartedMain] INFO  com.itech.guide.GuideApplication - The following 1 profile is active: "dev"
+[2022-07-01 06:28:20:392][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-07-01 06:28:20:392][restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2022-07-01 06:28:20:818][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:28:20:819][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:28:20:834][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:28:20:974][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:28:20:974][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-07-01 06:28:20:1025][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
+[2022-07-01 06:28:20:1030][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+[2022-07-01 06:28:20:1030][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2022-07-01 06:28:20:1036][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.MemberRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:28:20:1036][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.itech.guide.domain.member.repository.RoleRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+[2022-07-01 06:28:20:1036][restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+[2022-07-01 06:28:21:1237][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#71be2eb' of type [com.amazonaws.auth.BasicAWSCredentials] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:28:21:1237][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#3dde9864' of type [com.amazonaws.auth.AWSStaticCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:28:21:1241][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean '(inner bean)#56d5bae5' of type [com.amazonaws.auth.profile.ProfileCredentialsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:28:21:1243][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [org.springframework.cloud.aws.core.credentials.CredentialsProviderFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:28:21:1244][restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'credentialsProvider' of type [com.amazonaws.auth.AWSCredentialsProviderChain] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2022-07-01 06:28:21:1555][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2022-07-01 06:28:21:1561][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:28:21:1561][restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[2022-07-01 06:28:21:1562][restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+[2022-07-01 06:28:21:1604][restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-07-01 06:28:21:1604][restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1212 ms
+[2022-07-01 06:28:21:1713][restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-07-01 06:28:21:1740][restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.9.Final
+[2022-07-01 06:28:21:1811][restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-07-01 06:28:21:1859][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-07-01 06:28:21:1913][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-07-01 06:28:21:1923][restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL92Dialect
+[2022-07-01 06:28:22:2294][restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-07-01 06:28:22:2298][restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-07-01 06:28:22:3023][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/ef49de96's transaction start------------------------------
+[2022-07-01 06:28:22:3024][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/ef49de96] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:28:22:3047][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        member_tb member0_
+[2022-07-01 06:28:22:3054][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/ef49de96] Return:long org.springframework.data.repository.CrudRepository.count() time = 31ms
+[2022-07-01 06:28:22:3054][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/ef49de96's transaction end/31ms-------------------------
+[2022-07-01 06:28:22:3057][restartedMain] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/05b8d983's transaction start------------------------------
+[2022-07-01 06:28:22:3057][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/05b8d983] Return:long org.springframework.data.repository.CrudRepository.count() ,args = []
+[2022-07-01 06:28:22:3059][restartedMain] DEBUG org.hibernate.SQL - 
+    select
+        count(*) as col_0_0_ 
+    from
+        role_tb roles0_
+[2022-07-01 06:28:22:3062][restartedMain] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/05b8d983] Return:long org.springframework.data.repository.CrudRepository.count() time = 5ms
+[2022-07-01 06:28:22:3062][restartedMain] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/05b8d983's transaction end/5ms-------------------------
+[2022-07-01 06:28:23:3193][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@10d2d2db, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@271dc747, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c7689dc, org.springframework.security.web.header.HeaderWriterFilter@45787ad0, org.springframework.security.web.authentication.logout.LogoutFilter@2d90bb64, com.itech.guide.global.config.security.CustomAuthorizationFilter@7c1ae5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65507a70, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3da800a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1239d88c, org.springframework.security.web.session.SessionManagementFilter@1d6bba22, org.springframework.security.web.access.ExceptionTranslationFilter@3ab9d8aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c806d99]
+[2022-07-01 06:28:23:3196][restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/exception/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+[2022-07-01 06:28:23:3196][restartedMain] INFO  o.s.s.w.DefaultSecurityFilterChain - Will not secure Ant [pattern='/exception/**']
+[2022-07-01 06:28:23:3267][restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-07-01 06:28:23:3600][restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2022-07-01 06:28:23:3652][restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2022-07-01 06:28:23:3661][restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2022-07-01 06:28:23:3670][restartedMain] INFO  com.itech.guide.GuideApplication - Started GuideApplication in 3.547 seconds (JVM running for 3.92)
+[2022-07-01 06:28:33:13324][http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-07-01 06:28:33:13324][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2022-07-01 06:28:33:13325][http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2022-07-01 06:28:33:13336][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - ------------------------------0:0:0:0:0:0:0:1/4ac986bf's transaction start------------------------------
+[2022-07-01 06:28:33:13336][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/4ac986bf] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) ,args = [logouteyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0M0BuYXZlci5jb20iLCJqdGkiOiIwYjBmZmRjZi00NWUyLTQ2MmItOTVkNS02YWI1YWUxYjRkODYiLCJodHRwczovL2l0ZWNoLmNvbS9qd3RfY2xhaW1zIjp0cnVlLCJpYXQiOjE2NTY2MjQ0NDMsImV4cCI6MTY1NjY2MDQ0M30.h7oug53i6s4T-sGPaZ5Hgmvp4Quuckdkq3yxLJ3TwUM]
+[2022-07-01 06:28:33:13658][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [0:0:0:0:0:0:0:1/4ac986bf] Return:String com.itech.guide.global.common.redis.RedisService.getValues(String) time = 322ms
+[2022-07-01 06:28:33:13658][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - -------------------------------0:0:0:0:0:0:0:1/4ac986bf's transaction end/322ms-------------------------
+[2022-07-01 06:28:33:13677][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - ------------------------------218.38.137.28/33093f38's transaction start------------------------------
+[2022-07-01 06:28:33:13677][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/33093f38] Return:UserDetails com.itech.guide.domain.member.service.CustomMemberDetailService.loadUserByUsername(String) ,args = [test3@naver.com]
+[2022-07-01 06:28:33:13682][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/33093f38] |-->Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) ,args = [test3@naver.com]
+[2022-07-01 06:28:33:13687][http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        member0_.member_id as member_i1_1_0_,
+        roles2_.role_id as role_id1_2_1_,
+        member0_.member_age as member_a2_1_0_,
+        member0_.member_email as member_e3_1_0_,
+        member0_.member_name as member_n4_1_0_,
+        member0_.member_pwd as member_p5_1_0_,
+        roles2_.roles_role as roles_ro2_2_1_,
+        roles1_.member_id as member_i1_0_0__,
+        roles1_.role_id as role_id2_0_0__ 
+    from
+        member_tb member0_ 
+    inner join
+        member_roles roles1_ 
+            on member0_.member_id=roles1_.member_id 
+    inner join
+        role_tb roles2_ 
+            on roles1_.role_id=roles2_.role_id 
+    where
+        member0_.member_email=?
+[2022-07-01 06:28:33:13703][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/33093f38] |<--Return:Optional com.itech.guide.domain.member.repository.MemberRepository.findByEmail(String) time = 21ms
+[2022-07-01 06:28:33:13703][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - [218.38.137.28/33093f38] Return:UserDetails com.itech.guide.domain.member.service.CustomMemberDetailService.loadUserByUsername(String) time = 26ms
+[2022-07-01 06:28:33:13704][http-nio-8080-exec-1] INFO  c.itech.guide.global.log.LogTracer - -------------------------------218.38.137.28/33093f38's transaction end/26ms-------------------------
+[2022-07-01 06:47:46:1166369][HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m24s284ms).
