@@ -8,11 +8,5 @@ spring:
     blacklist:
       access-token: logout
 
-springdoc:
-  api-docs:
-    path: /api-doc
-  swagger-ui:
-    path: swagger-ui-custom.html
-
 
 

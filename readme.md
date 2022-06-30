@@ -8,8 +8,14 @@
 ### REDIS
 > docker run -d --network guide-network --name redis -p 6379:6379 lgodl1598/redis:1.0
 ### DATABASE
-> docker run -d --network guide-network -p 5432:5432 --name postgres lgodl1598/postgres:1.0
-
+> docker run -d -p 5432:5432 --network guide-network --name postgres lgodl1598/postgres:1.0
+### JAR
+> docker run -d -p 8080:8080 \
+--network guide-network \
+-e "spring.datasource.url=jdbc:postgresql://postgres:5432/testdb" \
+-e "spring.profiles.active=dev" \
+-e "spring.redis.host=redis" \
+--name guide lgodl1598/guide:1.0
 
 
 # 도메인 작성 규칙

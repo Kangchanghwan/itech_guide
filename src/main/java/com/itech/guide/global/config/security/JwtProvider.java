@@ -15,8 +15,10 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import java.time.Duration;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Base64;
+import java.util.Collection;
+import java.util.Date;
+import java.util.UUID;
 
 @Component
 @RequiredArgsConstructor
@@ -51,7 +53,6 @@ public class JwtProvider {
 
     public String createToken(String userId, Collection<Roles> roles,Long tokenInvalidTime){
         Claims claims = Jwts.claims().setSubject(userId); // claims 생성 및 payload 설정
-        claims.put("roles", mergeStream(roles)); // 권한 설정, key/ value 쌍으로 저장
         claims.setId(UUID.randomUUID().toString());
         claims.put("https://itech.com/jwt_claims",true);
         Date date = new Date();
@@ -61,10 +62,6 @@ public class JwtProvider {
                 .setExpiration(new Date(date.getTime() + tokenInvalidTime)) // 토큰 유효 시간 저장
                 .signWith(SignatureAlgorithm.HS256, SECRET_KEY) // 해싱 알고리즘 및 키 설정
                 .compact(); // 생성
-    }
-
-    private String mergeStream(Collection<Roles> roles) {
-        return roles.stream().map(role -> role.getRole().name()).collect(Collectors.joining(", "));
     }
 
     public Authentication validateToken(HttpServletRequest request, String token) {
