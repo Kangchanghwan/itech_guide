@@ -17,8 +17,6 @@ cloud:
     region:
       static: ap-northeast-2
     credentials:
-      access-key: AKIAQCT565N25DUYOEV6
-      secret-key: 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
     s3:
       bucket: gregorytest
 logging:
